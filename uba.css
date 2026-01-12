@@ -1,0 +1,3385 @@
+     *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+
+     }
+
+     .container{
+         width: 100%;
+         /* border: thick solid #d8232a; */
+         font-family: UBA Sans, Roboto;
+        }
+        
+
+  /* section 1 */
+
+     .sec1{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 20px 0;
+       position: static !important; 
+       
+      }
+      /* the hamburger menu display on mobile */
+      .menuham{
+        display: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: #333;
+        padding: 10px;
+      }
+
+   /* sel class for drop down iccon */
+        .sel{
+          margin-left:7px;
+          color: #888;
+        }
+
+   /* Left Navbar Div */
+      .leftnav{
+        display: flex;
+        align-items: center;
+
+      }
+
+   /* class for all the link in leftnav  */
+      .navlink{
+        display: flex ;
+        align-items: center;
+        gap: 45px !important;
+        height: 100% ;
+      }
+
+   /* the text in link for font, color, weight  */
+      .leftnav a{
+        font-family: UBA Sans, Roboto, sans-serif;
+        color: rgb(23, 23, 23);
+        line-height: 1.5rem;  
+         /* 1rem equal 16px */
+        font-size: 1rem;  
+        font-weight:500;
+        text-decoration: none;
+      }
+
+       
+      /* working on the dropdown wrap */
+      .dropdownwrap{
+        /*  dropdown items to align with the full-width */
+        position: static !important;
+        /*dropdown to sit as inline or side by side */
+        display: inline-block;
+        
+      }
+
+      .megamenu.active{
+        /* Shows the menu with Flex layout */
+        display: flex;
+      }
+
+      .megamenu{
+        /* Default state: Hidden */
+        display: none;
+        justify-content: space-between;
+        gap: 20px;
+        cursor: pointer;
+        position: absolute;
+        top: 80px ;
+        left: 0 ;
+        width: 100% ;
+        background-color:#fff;
+        z-index: 1000;
+        padding: 30px;
+        box-sizing: border-box;
+      }
+
+       .col{
+       /* This makes all 4 columns EXACTLY the same width */
+      flex: 1;
+      display: flex;
+      /* Stacks items vertically inside the column */
+      flex-direction: column; 
+      gap: 20px; 
+      }
+
+      .menucard{
+        /* Moved here so it occupies space permanently */
+        padding: 15px;            
+        border-radius: 12px;
+        background-color: transparent;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+  
+      .menucard:hover{
+        background-color: #f9f9f9; 
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+       transform: translateY(-5px);
+      }
+
+      .menucard h3{
+        font-family: UBA Sans, Roboto, sans-serif;
+        color: rgb(23, 23, 23);
+        font-size: 1.1rem;  
+        font-weight:600;
+        margin-bottom:5px;
+      }
+
+      .menucard p{
+        font-family: UBA Sans, Roboto, sans-serif;
+        color:#525252;
+        font-size: 1rem;  
+        font-weight:400;
+      }
+
+
+      /* header link in red color */
+      .mc{
+        color: red  !important ;
+        margin-bottom: 15px !important;
+      }   
+
+        /* the last div of col is the last child */
+      .col:last-child{
+        border-left: 1px solid #e0e0e0;
+        padding-left: 20px;
+      }
+
+      .col a{
+        font-family: UBA Sans, Roboto, sans-serif;
+        color: #555; 
+        font-size:0.95rem;  
+        font-weight:600;
+        /* treat the link as block element */
+        display: block;     
+      }
+
+      .col a:hover{
+        text-decoration: underline;
+        color: red;
+      }  
+
+      /* the icon arrow in front of those links */
+      .aro{
+        margin-left: 7px;
+
+      }
+
+      
+  /* Right Navbar Div */
+      .rightnav{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+
+  /* the text in link for font, color, weight  */
+      .rightnav a{
+         font-family: UBA Sans, Roboto, sans-serif;
+         color: rgb(23, 23, 23);
+         line-height: 1.5rem;
+         font-size: 1rem;  
+         font-weight:500;
+         text-decoration: none;
+         /* all text in section 1 to be on a single straight line & never break */
+         white-space: nowrap;
+      }
+
+   /* button borderbox */
+      .rightnav button{
+        display: flex;
+        align-items: center;
+       /* let it decides and fit by itself */
+        width: auto;
+       /* text in the box to be on a single straight line */
+        white-space: nowrap;
+        gap: 6px;
+        border: 1px solid #555;
+        padding: 10px;
+        border-radius: 7px;
+       /* ensure it matches the already background */
+        background-color: transparent;
+        font-family: UBA Sans, Roboto, sans-serif;
+        color: rgb(23, 23, 23);
+        line-height: 1.5rem;
+        font-size: 1rem;  
+        font-weight:500;
+        cursor: pointer;
+      }
+
+     /* hover effect on button */
+      .rightnav button:hover{
+        background-color:#d8232a;
+        color: rgb(255, 255, 255);
+      }
+       /* hover with border effect on account opening */
+      .rightnav .accopen:hover{
+        background-color:#d8232a;
+        color: rgb(255, 255, 255);
+        border: 1px solid #555;
+        padding: 10px;
+        border-radius: 7px;
+      }
+
+    /* image logo */   
+      .rightnav img{
+        width: 32%;
+      }
+
+      /* MEDIA QUERIES (Responsiveness)*/
+       /* --- SECTION 1 RESPONSIVENESS (Digital & Customize Cards) --- */
+
+
+      /* --- Tablet / Small Laptop (max-width: 1024px) --- */
+@media (max-width: 1024px) {   /* <--- Added missing bracket here */
+    .sec1 {
+        padding: 20px;
+    }
+
+      .rightnav {
+        gap: 15px;
+    }
+    .leftnav a, 
+    .rightnav a {
+        font-size: 0.9rem;
+    }
+}
+/* --- MOBILE VIEW (max-width: 768px) --- */
+@media (max-width: 768px) {
+    
+    /* 1. SECTION 1: Keep it in a Row (Side-by-Side) */
+    .sec1 {
+        flex-direction: row;      /* Keep them on the same line */
+        justify-content: space-between; /* Push Menu to left, Logo to right */
+        align-items: center;
+        height: auto;
+        padding: 15px 20px;       /* Nice padding */
+    }
+
+    /* 2. SHOW THE HAMBURGER MENU */
+    .menuham {
+        display: block;           /* Reveal the icon! */
+    }
+
+    /* 3. HIDE THE CLUTTER (Links & Buttons) */
+    .leftnav {
+        display: none;            /* Hides "Personal", "Business", etc. */
+    }
+
+    /* Target specific items in Right Nav to hide them, but KEEP THE LOGO */
+    .rightnav a,          /* Hides "Open an account" */
+    .rightnav button {    /* Hides "Internet Banking" button */
+        display: none;
+    }
+
+    /* 4. Ensure the Logo (inside rightnav) stays visible */
+    .rightnav {
+        display: flex;    /* Keep the container active */
+        width: auto;      /* Let it shrink to fit just the logo */
+    }
+    
+    .rightnav img {
+        width: 80px;      /* Adjust logo size for mobile */
+        display: block;
+    }
+}
+
+
+      /* section2 */
+
+     /* whole section 2 size and flex */
+      .sec2{
+        width: 90%;
+        height: 100%; 
+        max-width: 1400px;  
+        /* allow scrolling side way */
+        overflow-x: auto;
+        /* make it snap cleanlybto each card */
+        scroll-snap-type: x mandatory;
+        /*ensure no width line or border bottom show while scrolling */
+        scrollbar-width: none;
+        background-color: #f2f2f2;
+      /*  make the whole block container center horitontally ---  */
+        margin: 2% auto;
+        display: flex;
+        /* coz of the scroll to work from the start */
+        justify-content: start;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+      }
+
+      .sec2 img{
+        width: 300px;
+        height: 62vh;
+        /* stop shrinking,stay fixed size */
+        flex: 0 0 auto;
+        /* snap align to center when scroll */
+        scroll-snap-align: center;
+        flex-direction: column;
+        object-fit: cover;
+        border-radius: 20px;
+        overflow: hidden;
+  
+      }
+
+    /* the time img has heading & paragraph text inside */
+      .time{
+        background-image: url(/Gallery/TimeToUnlock.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 62vh;
+        border-radius: 20px;
+        /* dont grow, dont shrink, automatic size & fixed*/
+        flex: 0 0 auto;
+        width: 300px;
+      }
+      /* talking to the text in the time image */
+      .time h1{
+        color:  rgb(23, 23, 23);;
+        font-family: UBA Sans, Roboto, sans-serif;
+        padding: 20px;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+        text-align: center;
+      }
+      .time p{
+        color:  rgb(23, 23, 23);
+        padding: 20px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+        padding-top: 2%;
+      }
+
+  /* MEDIA QUERIES (Responsiveness)*/
+   /* --- SECTION 2 RESPONSIVENESS --- */
+
+
+@media (max-width: 768px) {
+    
+    /* Target both images and the time box */
+    .sec2 img, 
+    .time {
+        /* On phone, make card take up most of the screen */
+        width: 85vw; 
+        
+        /* Optional: adjust height if 62vh is too tall for phone */
+        height: 50vh; 
+    }
+
+    .sec2 {
+        /* Ensure the peeking card is visible */
+        padding-left: 20px; 
+        padding-right: 20px;
+        
+        /* Centers the active card when snapping */
+        scroll-padding-left: 20px; 
+    }
+}
+
+       /* section 3 */
+
+       .sec3{
+        width: 50%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        /* force them into a single line */
+        flex-wrap:wrap;
+        align-items: center;
+        margin: 0 auto;
+        gap: 20px;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 8px;
+        /* space between section 2 & 3 */
+        margin-top: 4%;
+        margin-bottom: 3%;
+      }
+
+       .items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        width: 80px;
+        height: 80px;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+       }
+
+       .sec3 h5{
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1 rem;
+        font-weight: 300;
+        line-height: 1rem;
+        /* box shadow effect on each card box */
+        color: rgb(23, 23, 23);
+        /* space between h5 and image icon */
+        padding-top: 10px;
+        /* text in the box to be on a single straight line */
+        white-space: nowrap;
+       }
+
+       /* MEDIA QUERIES (Responsiveness)*/
+        /* --- SECTION 3 RESPONSIVENESS --- */
+
+@media (max-width: 768px) {
+    
+    /* 1. Fix the Container (The Grey Box) */
+    .sec3 {
+        width: 95%;      /* Make it wide on mobile so items fit */
+        flex-wrap: wrap; /* Allow items to drop to new lines */
+        gap: 15px;       /* Reduce gap slightly for mobile */
+        padding: 15px;   /* Reduce padding */
+        
+        /* Ensure height adapts to the 3 rows */
+        height: auto;    
+    }
+
+    /* 2. Fix the Items (The White Cards) */
+    .items {
+        /* This Math creates 2 items per row:
+           (100% space - gap) / 2 items = approx 46% each */
+        width: 46%;      
+        
+        /* Optional: If you want them smaller/shorter on phone */
+        height: 100px;   
+    }
+}
+
+
+       /* section 4 */
+
+       .sec4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3%;
+        background-color: #f2f2f2;
+        padding-top: 4%;
+       
+       }
+       /* selecting all in common in section 4 */
+
+       .sec4 img{
+        width: 60%;
+  
+       }
+
+       .sec4 a{
+        text-decoration: none;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        color: rgb(23, 23, 23);
+        cursor: pointer;
+        
+       }
+         
+       /* red underline hover effect on the links text */
+       .sec4 a:hover{
+        text-decoration: underline;
+        color: #d8232a;
+         
+       }
+
+        /* the arrow icon in front of the links */
+       .arrowselect{
+        margin-left: 6px;
+        color: #d8232a;
+       }
+
+
+       .sec4 p{
+        padding-bottom: 4%;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        color: rgb(141, 141, 139); 
+       }
+
+       .sec4 h2{
+        padding-top: 2%;
+        padding-bottom: 2%;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: rgb(23, 23, 23);
+
+       }
+      
+      /* Online Account box card on left */
+       .onlineacc{
+        width: 45%;
+        height: 70vh;
+        border-radius: 20px;
+        border: none;
+        padding: 20px;
+        background-color: #ffffff;   
+       }
+
+       /* chat with leo box card on right  */
+       .chatwith{
+        width: 45%;
+        height: 70vh;
+        border-radius: 20px;
+        border: none;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 20px;
+       }
+
+       /* MEDIA QUERIES (Responsiveness)*/
+        /* --- SECTION 4 RESPONSIVENESS  */
+
+@media screen and (max-width: 900px) {
+
+    /* 1. Stack the cards vertically instead of side-by-side */
+    .sec4 {
+        flex-direction: column;  /* Changing from Row to Column */
+        padding-left: 20px;      /* Reduce the edge space on small screens */
+        padding-right: 20px;
+        gap: 20px;               /* Space between the stacked cards */
+    }
+
+    /* 2. Make the cards full width again */
+    .onlineacc, 
+    .chatwith {
+        width: 100%;    /* Overrides the 45% you set for desktop */
+        height: auto;   /* Let the height grow with the text */
+        min-height: 50vh; 
+    }
+    
+    /* 3. Ensure images fit nicely */
+    .sec4 img {
+        width: 80%;     /* Adjust image size for mobile focus */
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+   /* * Section 5 */ 
+   .sec5{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3%;
+        background-color: #f2f2f2;
+        padding-top: 3%;
+       
+       }
+       /* selecting all in common in section 5 */
+
+       .sec5 img{
+        width: 60%;
+  
+       }
+
+       .sec5 a{
+        text-decoration: none;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        color: rgb(23, 23, 23);
+        cursor: pointer;
+        
+       }
+         
+       /* red underline hover effect on the links text */
+       .sec5 a:hover{
+        text-decoration: underline;
+        color: #d8232a;
+         
+       }
+
+        /* the arrow icon in front of the links */
+       .arrowselect{
+        margin-left: 6px;
+        color: #d8232a;
+       }
+
+
+       .sec5 p{
+        padding-bottom: 4%;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        color: rgb(141, 141, 139); 
+       }
+
+       .sec5 h2{
+        padding-top: 2%;
+        padding-bottom: 2%;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: rgb(23, 23, 23);
+
+       }
+      
+      /* personal banking Section left card */
+       .personal{
+        width: 45%;
+        height: 70vh;
+        border-radius: 20px;
+        border: none;
+        padding: 20px;
+        background-color: #ffffff;   
+       }
+
+       /* business Section right card */
+       .business{
+        width: 45%;
+        height: 70vh;
+        border-radius: 20px;
+        border: none;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 20px;
+       }
+
+        /* MEDIA QUERIES (Responsiveness)*/
+         /* --- SECTION 5 RESPONSIVENESS --- */
+
+@media screen and (max-width: 900px) {
+
+    /* 1. Stack the cards vertically instead of side-by-side */
+    .sec5 {
+        flex-direction: column;  /* Changing from Row to Column */
+        padding-left: 20px;      /* Reduce the edge space on small screens */
+        padding-right: 20px;
+        gap: 20px;               /* Space between the stacked cards */
+    }
+
+    /* 2. Make the cards full width again */
+    .business, 
+    .personal {
+        width: 100%;    /* Overrides the 45% you set for desktop */
+        height: auto;   /* Let the height grow with the text */
+        min-height: 50vh; 
+    }
+    
+    /* 3. Ensure images fit nicely */
+    .sec5 img {
+        width: 80%;     /* Adjust image size for mobile focus */
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+      /* section 6 */
+
+      .sec6{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3%;
+        background-color: #f2f2f2;
+        padding-top: 3%;
+       
+       }
+       /* selecting all in common in section 6 */
+
+       .sec6 img{
+        width: 60%;
+  
+       }
+
+       .sec6 a{
+        text-decoration: none;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        color: rgb(23, 23, 23);
+        cursor: pointer;
+        
+       }
+         
+       /* red underline hover effect on the links text */
+       .sec6 a:hover{
+        text-decoration: underline;
+        color: #d8232a;
+         
+       }
+
+        /* the arrow icon in front of the links */
+       .arrowselect{
+        margin-left: 6px;
+        color: #d8232a;
+       }
+
+
+       .sec6 p{
+        padding-bottom: 2%;
+        /* so that all p on input have some space too */
+        padding-top: 1%;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        color: rgb(141, 141, 139); 
+       }
+
+       .sec6 h2{
+        padding-top: 2%;
+        padding-bottom: 2%;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: rgb(23, 23, 23);
+
+       }
+      
+      /* didgital Section left card */
+       .digital{
+        width: 45%;
+        height: 70vh;
+        border-radius: 20px;
+        border: none;
+        padding: 20px;
+        background-color: #ffffff;   
+       }
+
+       /* customize & all form Section right card */
+       .customize{
+        width: 45%;
+        height: 70vh;
+        border-radius: 20px;
+        border: none;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 20px;
+       }
+
+        /* all input boxes have same style */
+       .input1, .input2, .input3{
+        width: 85%;
+        margin-bottom: 2%;
+        border-radius: 7px;
+        padding: 10px;
+        border: thin solid black;
+        
+       }
+
+        /* checkbox div must have small space below*/
+      .checkboxall{
+        margin-bottom: 1%;
+      }
+
+       /* all interest class have gap in front for the checkboxes */
+       #interest{
+        margin-right: 1%;
+        
+       }
+        /* all label tags have gap in front of the text or label  */
+       label{
+        margin-right: 1%;
+       }
+
+     /* terms and condition link must be underline adding !important to force it work */
+       .terms{ 
+        text-decoration: underline !important;
+        color: #333 !important;
+
+       }
+
+        /* MEDIA QUERIES (Responsiveness)*/
+        /* =========================================
+   SECTION 6 MOBILE RESPONSIVENESS
+   ========================================= */
+   
+  
+@media screen and (max-width: 768px) {
+  /* --- SECTION 6: FORM & CARDS FIX --- */
+
+    /* 1. Stack the Digital and Customize cards vertically */
+    .sec6 {
+        display: flex;
+        flex-direction: column; /* Forces top-to-bottom layout */
+        gap: 20px;
+        padding: 20px;
+        height: auto;
+    }
+
+    /* 2. Make the cards full width */
+    .digital, 
+    .customize {
+        width: 100%;    /* Fills the phone screen */
+        height: auto;   /* Grows with content */
+        margin-bottom: 20px;
+    }
+
+    /* --- THE CHECKBOX FIX (GRID METHOD) --- */
+    
+    /* 3. Create a strict 2-column grid for the form */
+    .checkboxall {
+        display: grid;
+        grid-template-columns: 25px 1fr; /* Col 1: 25px (Checkbox) | Col 2: Rest (Text) */
+        align-items: center;    /* Align them vertically in the middle */
+        row-gap: 12px;          /* Space between rows */
+        text-align: left;       /* Force all text to align left */
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    /* 4. IMPORTANT: Hide the line breaks that are messing up alignment */
+    .checkboxall br {
+        display: none; 
+    }
+
+    /* 5. Style the Checkbox itself */
+    .checkboxall input {
+        width: 18px;
+        height: 18px;
+        margin: 0;      /* Remove any floating margins */
+        justify-self: start; /* Force checkbox to stick to the left */
+    }
+
+    /* 6. Style the Text Label */
+    .checkboxall label {
+        font-size: 0.95rem;
+        color: #333;
+        margin: 0;
+        justify-self: start; /* Force text to stick next to checkbox */
+        line-height: 1.2;
+    }
+} 
+     /* section 7 */
+
+     .sec7{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3%;
+        background-color: #f2f2f2;
+        padding-top: 3%;
+
+       }
+
+        /* selecting all in common in section 7 */
+       .sec7 p{
+        
+        padding-top: 1%;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        color: rgb(141, 141, 139); 
+       }
+
+       .sec7 h2{
+        padding-top: 1px;
+        padding-bottom: 2px;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: rgb(23, 23, 23);
+
+       }
+
+        /* All about Nigeria stock Section left card */
+       .nigeriastock{
+        width: 45%;
+        height: 80vh;
+        border-radius: 20px;
+        border: none;
+        padding: 20px;
+        background-color: #ffffff;   
+       }
+        /* the header of symbol and price, giving it flex so they can scatter */
+        .th1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 3px;
+        color: #777;
+        font-size: 14px;
+        }
+      
+
+        .line{
+       display: flex;
+        /* Pushes leftside and rightside apart */
+       justify-content: space-between;
+       align-items: center;
+       /* The thin line between rows */
+       border-bottom: 1px solid #e0e0e0;
+       padding: 15px 0;
+        }
+
+        /* Column stacks (Vertical text inside the rows) */
+       .leftside, .rightside {
+       display: flex;
+       flex-direction: column;
+        }
+
+       /* Aligns price to the right */
+       .rightside{
+       align-items: flex-end; 
+        }
+
+        /* text color font */
+        .ticker {
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        color: rgb(0, 0, 0); 
+       }
+        /* text color font */
+         .company {
+        font-size: 12px;
+        color: rgb(141, 141, 139); 
+        margin-top: 4px;
+        }
+
+        /*  all about customize exchange rate Section right card */
+       .exchangerate{
+        width: 45%;
+        height: 80vh;
+        border-radius: 20px;
+        border: none;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 20px;
+       }
+
+
+       .th2{
+        display: grid; 
+        grid-template-columns: 2fr 1fr 1fr;
+        align-items: center;
+        color: #888;
+        font-size:14px;
+        margin-bottom:3px;
+        margin-top: 10px;
+       }
+          
+
+       .line2{
+       display: grid;
+       /* This splits the row: 2 parts for currency, 1 part for Buy, 1 part for Sell */
+       grid-template-columns: 2fr 1fr 1fr; 
+       padding: 15px 0;
+       border-bottom: 1px solid #e0e0e0;
+       align-items: center;
+        }
+
+
+     /* MEDIA QUERIES (Responsiveness)*/
+        /* =========================================
+   SECTION 7 MOBILE RESPONSIVENESS
+   ========================================= */
+   
+@media (max-width: 768px) {
+
+    .sec7 {
+        /* Stack the cards vertically */
+        flex-direction: column;
+        /* Increase gap so the stacked cards don't touch */
+        gap: 30px;
+        /* Add some bottom padding so the last card isn't stuck to the footer */
+        padding-bottom: 50px;
+    }
+
+    .nigeriastock, 
+    .exchangerate {
+        /* Make cards wide on mobile (90% width looks good with the centered flex) */
+        width: 90%;
+        /* IMPORTANT: Change fixed height (80vh) to auto so the cards adapt to their content */
+        height: auto;
+        /* Add a minimum height just in case, or remove this if you have enough content */
+        min-height: 400px; 
+    }
+
+    /* Optional: Adjust header size for smaller screens */
+    .sec7 h2 {
+        font-size: 1.3rem;
+    }
+    }
+
+
+     /* section 8 */
+     .sec8{
+      padding-top: 5%;
+      padding-bottom: 2%;
+      text-align: left;
+      /* space in the left and right so they can be in starting */
+      padding-left: 5%;
+      padding-right: 5%;
+      text-align: left;
+      background-color: #f2f2f2;
+      border-bottom: 1px solid #e0e0e0;
+     }
+
+      
+     .cardlink{
+        display: flex;
+        /* giving it flex start so they can be aligned to the left  or begining*/
+        justify-content:flex-start;
+        align-items: center;
+        gap: 20px;
+        
+       }
+
+       .sec8 h2{
+        margin-bottom:2%;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+       }
+
+      .cardlink a{
+        text-decoration: none;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1.rem;
+        font-weight: 700;
+        color: rgb(141, 141, 139); 
+        cursor: pointer;
+       }
+
+       .cardlink a:hover{
+        color: #d8232a;
+       }
+
+       
+    /* section 9 */
+    .sec9{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* 2% gap was given here cos 2 space&gap needed */
+        gap: 2%;
+        background-color: #f2f2f2;
+        padding-top: 3%;
+        
+       }
+
+       /* selecting all in common in section 9 */
+
+       .sec9 img{
+        width: 90%;
+        /* never let it wider than each container */
+        max-width: 100%;
+        /* treat the img like block or box, make it stand on it own */
+        display: block;
+        height: auto;
+        
+  
+       }
+
+       .sec9 a{
+        text-decoration: none;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        color: rgb(23, 23, 23);
+        cursor: pointer;
+        padding-bottom: 3%;
+        
+       }
+         
+       /* red underline hover effect on the links text */
+       .sec9 a:hover{
+        text-decoration: underline;
+        color: #d8232a;
+         
+       }
+
+        /* the arrow icon in front of the links */
+       .arrowselect{
+        margin-left: 6px;
+        color: #d8232a;
+       }
+
+
+       .sec9 p{
+        padding-bottom: 7%;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        color: rgb(141, 141, 139); 
+       }
+
+       .sec9 h2{
+        padding-top: 1%;
+        padding-bottom: 4%;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: rgb(23, 23, 23);
+
+       }
+      
+      /* Prepaid card Section left cardbox */
+      /* credit card section middle cardbox */
+      /* debit card section right cardbox */
+       .prepaid,.credit,.debit{
+
+        /* each cardbox will share same width of 30% */
+        width: 30%;
+        height: 60vh;
+        border-radius: 20px;
+        border: none;
+        padding: 20px;
+        background-color: #ffffff;  
+        /* all content inside the cardbox must be hidden if it overflows */
+        overflow: hidden;
+       }
+
+        /* =========================================
+   SECTION 8  AND SECTION 9 MOBILE RESPONSIVENESS
+   ========================================= */
+    
+
+       /* Media Query for Tablets and Mobile (Max-width: 768px) */
+@media screen and (max-width: 768px) { 
+    /* Section 8 Adjustments */
+    .sec8 {
+        padding-top: 10%; /* More breathing room on top */
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .cardlink {
+        flex-wrap: wrap; /* Allows links to go to the next line if screen is narrow */
+        gap: 15px;
+    }
+    .sec8 h2 {
+        font-size: 1.5rem; /* Smaller heading for mobile */
+    }
+    /* Section 9 Adjustments */
+    .sec9 {
+        flex-direction: column; /* Stack cards vertically */
+        padding-left: 5%;
+        padding-right: 5%;
+        gap: 20px; /* Space between stacked cards */
+    }
+    .prepaid, .credit, .debit {
+        width: 100%; /* Make cards full width */
+        height: auto; /* Let content dictate the height */
+        padding: 30px 20px; /* Slightly more padding for touch targets */
+    }
+    .sec9 img {
+        width: 100%; /* Ensure image fills the container */
+        margin-bottom: 15px;
+    }
+    .sec9 h2 {
+        font-size: 1.3rem;
+    }
+  }
+
+
+/* Section 10 */
+
+/*container that hold the first background  */
+.sec10{
+  padding-top:5%;
+  padding-bottom: 5%;
+  background-color: #f2f2f2;;
+  display: flex;
+  justify-content: center;
+}
+
+   /* container that hold the mobile advert */
+   .mobile{
+        width: 90%;
+        height: 50%;
+        border-radius: 15px;
+        background-color: rgb(229,229,229);
+        padding-top: 3%;
+        padding-bottom:3%; 
+        /* space in left before items in the left start */
+        padding-left: 5%;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        /* gap:20%; */
+        /* all content must not show outside the box */
+        overflow: hidden;
+
+      }
+
+      .sec10 p{
+        padding-bottom: 7%;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        font-weight: 400;
+        color: rgb(0, 0, 0); 
+       }
+
+       .sec10 h1{
+        padding-top: 1%;
+        padding-bottom: 4%;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 2rem;
+        font-weight:900;
+        color: rgb(23, 23, 23);
+
+       }
+
+        /* all about left corner in section 10 */
+        .mobleleft{
+          width: 100%;
+        }
+
+      
+
+       /* reduce the image size */
+      .applogo{
+        width: 20%;
+        padding-bottom: 3%;
+      }
+      /* reduce the image size */
+      .storee{
+        width: 35%;
+        
+      }
+ 
+      /* flex that hold the download image */
+      .store{
+        display: flex;
+        justify-content: flex-start;
+        gap: 5%;
+        
+      }
+
+      /* all about right corner in section 10 */
+
+         .mobileright{
+          width: 100%;
+         }
+
+       .mobileright img{
+        width: 100%;
+         /* never let it wider than each container */
+        max-width: 100%;
+        /* treat the img like block or box, make it stand on it own */
+        display: block;
+        height: auto;
+        
+       }
+
+
+       
+        /* =========================================
+      SECTION 10 MOBILE RESPONSIVENESS
+   ========================================= */
+    
+
+       @media screen and (max-width: 768px){ 
+
+  .sec10 {
+    /* Remove fixed padding to let content breathe */
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .mobile {
+    /* Stack the text (left) and image (right) vertically */
+    flex-direction: column;
+    /* IMPORTANT: Change fixed height to auto so content fits */
+    height: auto; 
+    /* Center all text inside */
+    text-align: center;
+    padding-right: 5%; /* Match the padding-left */
+  }
+  /* Adjust the text area */
+  .mobleleft {
+    width: 100%;
+    margin-bottom: 30px; /* Add space between text and phone image */
+  }
+  .sec10 h1 {
+    font-size: 1.5rem; /* Slightly smaller heading for mobile */
+    line-height: 2rem;
+  }
+  /* Center the app store buttons */
+  .store {
+    justify-content: center;
+    padding-bottom: 20px;
+  } 
+  .storee {
+    width: 40%; /* Make buttons slightly larger on mobile touchscreens */
+  }
+  /* Adjust the phone image area */
+  .mobileright {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Ensure image is centered */
+  } 
+  .mobileright img {
+    width: 80%; /* Prevent it from being too huge */
+  }
+}
+
+
+
+       /* Section 11 */
+       .sec11{
+        display: flex;
+        justify-content: space-between;
+        gap: 5%;
+        padding-top: 5%;
+       /* space in left when start */
+        padding-left: 5%;
+       /* space in right when end */
+        padding-right: 5%;
+        background-color: #262626;
+       }
+
+      /* selecting all in common at once for h3 */
+       .sec11 h3{
+        color: #e0e0e0;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        padding-bottom: 20px;
+        line-height: 20px;
+       }
+          
+       /*  for all the ul & li command */
+       .sec11 li{
+        list-style-type: none;
+        padding-bottom: 20px;
+       }
+
+         /* selecting all in common at once for a attribute/links */
+      .sec11 a{
+        text-decoration: none;
+        color: rgb(169, 169, 169) ;
+        cursor: pointer;
+     
+      }
+       /* hover effect on every link */
+      .sec11 a:hover{
+        text-decoration: underline;
+        color: rgb(169, 169, 169) ;
+
+      }
+
+      /* the last h3 was seperate and given a unique class */
+      .gettheapp{
+        padding-top: 20px;
+      }
+  
+       /* the ul that carry  bunch of img was given a unique class */
+      .connect img{
+        width: 20%;
+        padding-right:7px;
+      }
+
+   /* the last img was seperate and given a div class */
+      .getthe{
+        width: 50%;
+        padding-bottom: 10%;
+      }
+
+      /* =========================================
+      SECTION 11 MOBILE RESPONSIVENESS
+   ========================================= */
+   @media screen and (max-width: 768px) {
+
+  .sec11 {
+    flex-direction: column; 
+    gap: 40px; 
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .getthe {
+    width: 100%; 
+  }
+
+  /* RULE 1: Shrink ALL images in sec11 (Social Icons ) */
+  .sec11 img {
+    width: 30px !important; 
+    height: auto !important;
+  }
+
+  /* RULE 2: "Un-shrink" ONLY the App Buttons inside .getthe */
+  .sec11 .getthe img {
+    width: 135px !important; /* Standard size for app buttons */
+    margin-top: 10px;
+  }
+}
+
+       /* section 12 */
+ 
+       /* the tiny last part of the Landing Page */
+         .sec12{
+            background-color:#0a0a0a ; 
+            text-align:left;
+            /* space in left when start */
+            padding-left: 5%;
+            font-size: 14px;
+            font-weight: 400;
+            color: white;
+            width: 100%;
+            height: 20vh;
+            padding-top: 2%;
+         }
+     
+      /* =========================================
+      SECTION 12 MOBILE RESPONSIVENESS
+   ========================================= */
+    
+  /* --- Section 12 Mobile Adjustments (Copyright) --- */
+     
+       @media screen and (max-width: 768px) {
+  .sec12 {
+    height: auto; /* Remove fixed height */
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center; /* Center the copyright text */
+    padding-right: 5%; /* specific padding for alignment */
+  }
+}
+
+
+/* ACCOUNT OPENING PAGE */
+     .accountopening{
+         width: 100%;
+         /* border: thick solid #d8232a; */
+         font-family: UBA Sans, Roboto;
+        
+        }
+
+    /* section 13 */
+.sec13{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+  padding-top: 8px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.sec13 h1{
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight:400;
+        color: rgb(23, 23, 23);
+}
+ 
+/* reduce the logo size to 13% */
+.sec13 img{
+  width: 13%;
+}
+
+
+/* section 14 */ 
+.sec14{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+  padding-top: 3%;
+  /* space in left,right,top,bottom */
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5px;
+  /* line border below */
+  border-bottom: 1px solid #e0e0e0; 
+}
+ 
+/* space inside the default select area */
+.language{
+  padding: 10px;
+ 
+}
+
+
+/* Section 15 */
+/* flex command for the left & right corner section */
+.sec15{
+  display: flex;
+  align-items: center;
+  gap:0;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-bottom: 1px solid #e0e0e0 !important; 
+  
+}
+  /* left section  for image */
+.lady img{
+  width:auto;
+  /* to be treated as image fully no text around */
+  display: block;
+  /* how long the image should go */
+  height: 75vh;
+}
+ 
+ /* right section for box  container */
+.welcome{
+  /* full width of the right corner space */
+  width:100%;
+  height: 75vh;
+  border-radius: 10px;
+  background-color: #e6e6e6;
+  /* space in the left side of the container box */
+  padding-left: 3%;
+  /* all content,items stay inside */
+  overflow: hidden;
+  /* box shadow for the box container */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.welcome h2{
+   padding-top: 10%;
+   padding-bottom: 6%;
+   color:rgb(250, 0, 0);
+   font-family: UBA Sans, Roboto, sans-serif;
+   font-size:28px;
+   font-weight:400;
+   line-height: 1rem;
+}
+
+.welcome p{
+   font-family: UBA Sans, Roboto, sans-serif;
+   font-size: 14px;
+   font-weight:700;
+   line-height: 1rem;
+   color: rgb(98, 98, 98);
+   padding-bottom: 5%;
+}
+ 
+.country{
+  display: flex;
+  /* ensure the div items are in column line*/
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 90%;
+
+}
+
+.country select{
+  text-align: center;
+  padding: 8px;
+  color: #464a4c;
+  border: 1px solid #ccc;
+  margin-bottom: 4%;
+  font-size: 14px;
+  font-weight:200;
+  line-height: 1rem;
+  cursor: pointer;
+  
+}
+
+.country a{
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #d8232a;
+  border: none;
+  padding: 7px;
+  font-size: 14px;
+  font-weight:200;
+  line-height: 1rem;
+  cursor: pointer;
+}
+
+
+/* section 16 */
+.sec16{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  padding-bottom:3%;
+}
+
+.sec16 p{
+    font-family: UBA Sans, Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 12px;
+    color: rgb(98, 98, 98);
+  }
+
+  .sec16 a{
+    text-decoration: none;
+    color: rgb(109, 92, 174);
+    padding-right:5px;
+  }
+
+
+ /* =========================================
+     ACCOUNTOPENING SECTION 13, 14, 15, 16. MOBILE RESPONSIVENESS
+   ========================================= */
+  /* Mobile Responsiveness (Max width 768px) */
+@media only screen and (max-width: 768px) {
+
+    /* --- Section 13 (Header/Logo) --- */
+    .sec13 {
+        padding-top: 15px;
+        gap: 15px; /* Reduce the large gap */
+    }
+
+    .sec13 h1 {
+        font-size: 1.2rem; /* Make the text smaller */
+        line-height: 1.4rem;
+    }
+
+    .sec13 img {
+        width: 30%; /* Make logo bigger on mobile so it's visible */
+    }
+
+
+    /* --- Section 14 (Language/Breadcrumb) --- */
+    .sec14 {
+        flex-wrap: wrap; /* Allow items to drop to next line if needed */
+        font-size: 0.9rem;
+    }
+
+    /* --- Section 15 (Main Split Section) --- */
+    .sec15 {
+        flex-direction: column; /* CRITICAL: Stack image and form vertically */
+        padding: 5% 5%; /* Adjust padding */
+        height: auto; /* Remove fixed height constraints */
+    }
+
+    /* The Image (Left Side) */
+    .lady img {
+        width: 100%; /* Full width */
+        height: 200px; /* Limit height so it's like a banner */
+        object-fit: cover; /* Crop image neatly */
+        /* Optional: display: none; -> Use this if you want to hide the image entirely on mobile */
+    }
+
+    /* The Form Box (Right Side) */
+    .welcome {
+        width: 100%; /* Full width */
+        height: auto; /* Let the box grow with the content */
+        padding: 20px; /* Add internal breathing room */
+        margin-top: 20px; /* Add space between image and form */
+    }
+
+    .welcome h2 {
+        padding-top: 5%;
+        font-size: 22px; /* Smaller heading for mobile */
+    }
+
+    /* --- Section 16 (Footer) --- */
+    .sec16 {
+        flex-direction: column-reverse; /* Stack items, maybe links on top or bottom */
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+
+/* Internet Banking */
+ 
+
+   body{
+ /* It will try Lato first, then Roboto, then Open Sans, then system fonts */
+    font-family: 'Lato', 'Roboto', 'Open Sans', Arial, Helvetica, sans-serif;
+}
+   
+
+    /* !-- Section 17 */
+     .sec17{
+        /* image in background stay in place when scrolling */
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         /* image stay behind all content & items or at the back */
+         z-index: -1;
+         /* border: thick solid #d8232a; */
+         font-family: UBA Sans, Roboto;
+         /* fall back color so it never white/blank */
+        }
+
+        .backgg{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          /* making all the image cover-up all screen */
+          background-size: cover;
+          background-position: center;
+          /* Start hidden */
+          opacity: 0; 
+          /* 10s total  5s for each image */
+          animation: fadeLoop 10s infinite;
+        }
+
+        .backgg img{
+          width: 100%;
+          height: 100%;
+          /* keep the image from looking squished */
+          object-fit: cover;
+        }
+
+        /* IMAGE 1 (The Base) - Always visible */
+      .backgg:nth-child(1) {
+           z-index: 1;
+        /* Never fades out */
+           opacity: 1; 
+        }
+
+      /* IMAGE 2 (The Top Layer) - Fades in and out */
+     .backgg:nth-child(2) {
+          z-index: 2;
+          /* Starts hidden */
+          opacity: 0;
+         animation: fadeTopImage 10s infinite;
+        }
+
+      /*  The Animation Keyframes */
+      @keyframes fadeTopImage {
+          0% { opacity: 0; }
+           /* Fade IN to Image 2 */
+          20% { opacity: 1; }
+          /* Stay on Image 2 */
+          50% { opacity: 1; } 
+           /* Fade OUT to Image 1 */
+          70% { opacity: 0; }
+         100% { opacity: 0; }
+      }
+
+          /* sec 18 */
+
+          .sec18{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 5%;
+            padding-top: 5%;
+          }
+
+          .sec18 img{
+            width:10%;
+          }
+
+
+          /* sec 19 */
+          .sec19{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            gap: 2%;
+            margin: 0 auto;
+            /* padding-left: 5%; */
+            padding-right: 5%;
+
+          }
+
+          .img16 img{
+            width: 100%;
+            height: auto;
+            /* remove tiny gap under images */
+            display: block;
+            /* to wrap the image with border */
+            border:  2px solid #d8232a;
+          } 
+
+          .logcard{
+            margin-top:5%;
+            background-color: rgb(212, 46, 18);
+            border-radius: 10px;
+            width: 23%;
+            height:70vh;
+            /* 10px space for top&bottom and 15px for left&right*/
+            padding: 10px 15px;
+          }
+
+          .sec19 h3{
+            color: #ffffff;
+            font-weight: 300;
+            font-size: 14px;
+          }
+
+          .sec19 p{
+            color: #ffffff;
+            font-weight: 300;
+            font-size: 12px;
+          }
+
+          .sec19 a{
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 300;
+            font-size: 13px;
+          }
+
+          .logcard h3{
+            text-align: center;
+            /* space betwen each word & letter */
+            letter-spacing: 1px;
+            margin-bottom:15px;
+
+          }
+          .selarea{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+           /* all text in section 1 to be on a single straight line & never break */
+            white-space: nowrap;
+            padding-bottom: 20px;
+          }
+
+          .selarea img{
+            width:20px ;
+          }
+           /* styling the icon itself & treating it like text too */
+          .selarea i{
+            font-size: 10px;
+            margin-right:6px;
+          }
+
+          .checkboxx{
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+          }
+          #dvk{
+            margin-right:8px;
+          }
+
+           .userid{
+            text-align: left;
+            width: 90%;
+            height: auto;
+            border:1px solid #f2f2f2;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            margin: 0 ;
+            border-radius:5px;
+          }
+ 
+          /* styling the icon itself & treating it like text too */
+          .userid i{   
+            margin-right: 3px;
+            /* changing the icon itsellf to black */
+            color: #0a0a0a;
+          }
+
+          .userid input{
+            border: none;
+            outline: none;
+            /* to inherit already background color */
+            background-color: transparent;
+          }
+
+          .pad{
+            margin-bottom: 20px;
+            text-align: left;
+          }
+
+          .remem{
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom:15px;
+            
+          }
+
+          .remem input{
+            padding-right: 2%;
+          }
+
+          .remem label{
+            margin-right:8px;
+          }
+
+          #rem{
+            margin-right: 8px;
+          }
+
+          button{
+            text-align: center;
+            width:90%;
+            height: auto;
+            padding: 7px;
+            background-color: #c62b20;
+            margin-bottom: 20px;
+            border: 1px solid #f2f2f2;
+            color: #f2f2f2;
+            cursor: pointer;
+          }
+
+          .forgotlink{
+            margin-bottom: 20px;
+          }
+
+          .instant{
+            width:90%;
+            height: auto;
+            padding: 7px;
+            background-color:#3f1c19;
+            margin-bottom: 15px;
+            cursor: pointer;
+            /* making the link behave like a box (block) instead of text */
+            display: block;
+            /* center the elements */
+            margin-right: auto;
+            margin-left: auto; 
+          }
+
+          /* Section 20 */
+          .sec20{
+            display: flex;
+            justify-content: space-between;
+            /* align-items: center; */
+            padding: 2% 5%;
+            /* using the opacity effect here for blur & transparency 0.6 */
+            background-color: rgba(0, 0, 0, 0.6);
+            /* another blur effect options */
+            backdrop-filter: blur 5px;
+            height: 30vh;
+            margin-top: 2%;
+            
+          }
+            /* select every a link in this section 20 */
+          .sec20 a{
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 300;
+            font-size: 12px;
+            cursor: pointer;
+          }
+         
+          /* select every span in this section 20 */
+          .sec20 span{
+            margin-right: 3px;
+            margin-left: 3px;
+
+          }
+
+           /* select every h3 in this section 20 */
+          .sec20 h3{
+            color: #ffffff;
+            font-weight: 400;
+            font-size: 1rem;
+            padding-bottom: 2%;
+
+          }
+
+         .sec20 .profwrap p{
+            color: #ffffff;
+            font-weight: 300;
+            font-size: 13px;
+            padding-bottom: 3%;
+          }
+
+          .profwrap{
+            width: 30%;
+            height: 22vh;
+            padding: 10px;
+            border: 2px solid #ffffff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+          }
+
+          /* section 21 */
+
+          .sec21{
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(59,56,55);
+            white-space: nowrap;
+            /* that first number of 1% work for both padding top & bottom */
+            /* that last number of 5% work for both padding right & left */  
+            padding: 1% 5%;
+            
+          }
+
+          .sec21 img{
+            width: 18%;
+            cursor: pointer;
+          }
+
+          .sec21 a{
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 300;
+            font-size: 12px;
+            cursor: pointer;
+          }
+
+          .sec21 span{
+            margin-right: 3px;
+            margin-left: 3px;
+            color: white;
+
+          }
+
+          .sec21 p{
+            color: #ffffff;
+            font-weight: 300;
+            font-size: 10px;
+          }
+
+   /* =========================================
+    INTERNETBANKING  SECTION 17, 18, 19, 20, 21 MOBILE RESPONSIVENESS
+   ========================================= */
+  /* Mobile Responsiveness (Max width 768px) */
+  /* =========================================
+  /* =========================================
+   MEDIA QUERY (Mobile & Tablet Responsiveness)
+   ========================================= */
+@media screen and (max-width: 768px) {
+
+    /* --- Section 18: Header Logo --- */
+    .sec18 {
+        justify-content: center; /* Center the logo instead of pushing right */
+        padding-right: 0;
+        padding-top: 2%;
+    }
+    
+    .sec18 img {
+        width: 30%; /* Make the logo bigger so it's visible on phone */
+    }
+
+    /* --- Section 19: Main Content (Ad + Login) --- */
+    .sec19 {
+        flex-direction: column; /* Stack them vertically instead of side-by-side */
+        padding: 5%; /* Add breathing room around the edges */
+        gap: 30px;   /* Add space between the Ad image and the Login card */
+    }
+
+    /* The Ad Image Container */
+    .img16 {
+        width: 100%; /* Force image container to take full width */
+    }
+
+    /* The Red Login Card */
+    .logcard {
+        width: 100%;      /* Expand card to fill the screen width */
+        height: auto;     /* IMPORTANT: Remove fixed height so content fits */
+        margin-top: 0;
+        box-sizing: border-box; /* Prevents padding from breaking the layout */
+    }
+
+    /* --- Section 20: The 3 Profile Cards --- */
+    .sec20 {
+        flex-direction: column; /* Stack the 3 cards on top of each other */
+        height: auto;           /* Allow section to grow as tall as needed */
+        padding: 5%;
+        gap: 15px;              /* Space between the stacked cards */
+        
+        /* Make background darker on mobile for better readability */
+        background-color: rgba(0, 0, 0, 0.8); 
+    }
+
+    .profwrap {
+        width: 100%;       /* Card takes full width */
+        height: auto;      /* Let height adjust to text content */
+        box-sizing: border-box;
+    }
+    
+    /* Fix text size inside cards for mobile */
+    .sec20 .profwrap p {
+        font-size: 14px; /* Slightly larger for touch screens */
+    }
+
+    /* --- Section 21: Footer --- */
+    .sec21 {
+        flex-direction: column; /* Stack footer items */
+        align-items: center;    /* Center everything */
+        text-align: center;     
+        white-space: normal;    /* Allow text to wrap to next line */
+        gap: 15px;
+        padding-bottom: 20px;
+    }
+    
+    .sec21 img {
+        width: 30%; /* Make footer logo visible */
+    }
+}
+
+/* Instant Self Registration */
+
+  body{
+ /* It will try Lato first, then Roboto, then Open Sans, then system fonts */
+    font-family: 'Lato', 'Roboto', 'Open Sans', Arial, Helvetica, sans-serif;
+    background-color: rgb(247,249,246);
+}
+
+/* Section 22 */
+.sec22{
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+  height: 18vh;
+  width: 100%;
+  background-color: #f1f1f1;
+  /* using opacity for the box shadow */
+  box-shadow:0px 4px 15px rgba(0, 0, 0, 0.5) ;
+  border-radius: 5px;
+  padding: 2% 3%;
+}
+
+.sec22 img{
+  width: 95%;
+  height: auto;
+}
+
+/* Header for Section 23 */
+.seff{
+  text-align: center;
+  padding: 3% 5%;
+}
+
+.selff h2{
+   color: rgb(23, 23, 23);
+   font-weight: 700;
+   font-size: 1.7rem;
+   text-align: center;
+   margin-top: 3%;
+   margin-bottom: 5px;
+   padding-right: 20%;
+}
+
+/* section 23 */
+.sec23{
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', 'Roboto', 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.isr{
+  width: 60%;
+  height: 25vh;
+  border: 1px solid #e0e0e0 ;
+  background-color: rgb(255, 255, 255) ;
+  border-radius: 6px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  padding-top: 1%;
+  margin-bottom: 20%;
+  
+}
+
+.isr h5{
+   color: rgb(117, 117, 117);
+   font-weight: 600;
+   font-size: 18px;
+   padding-left: 1%;
+   padding-bottom: 3%;
+}
+
+
+.isr2{
+   color: rgb(98, 98, 98);
+   font-weight: 500;
+   font-size: 1.1rem; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom:3%;
+
+}
+
+.isr2 span{
+  margin-right: 2%;
+}
+
+#boxes{
+  margin-right:1%;
+}
+
+.isr2 label{
+  margin-right: 2%;
+}
+
+.conbac{
+  display: flex;
+  justify-content: flex-end;
+  gap: 1%;
+  width: 100%;
+  padding-right: 1%;
+}
+ 
+/* styling Button */
+
+.con{
+  width: 10%;
+  height: auto;
+  border-radius: 3px;
+}
+
+.con a{
+  text-decoration: none;
+  color: white;
+}
+
+.bac{
+  width: 7%;
+  height: auto;
+  border-radius: 3px;
+}
+
+
+         /* section 24 */
+
+    .sec24{
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(59,56,55);
+            white-space: nowrap;
+            /* that first number of 1% work for both padding top & bottom */
+            /* that last number of 5% work for both padding right & left */  
+            padding: 1% 5%;
+            
+          }
+
+          .sec24 img{
+            width: 18%;
+            cursor: pointer;
+          }
+
+          .sec24 a{
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 300;
+            font-size: 12px;
+            cursor: pointer;
+          }
+
+          .sec24 span{
+            margin-right: 3px;
+            margin-left: 3px;
+            color: white;
+
+          }
+
+          .sec24 p{
+            color: #ffffff;
+            font-weight: 300;
+            font-size: 10px;
+          }
+
+
+                 /* =========================================
+    INTSTANT SELF REGISTRATION SECTION 22, 23, 24,  MOBILE RESPONSIVENESS
+                ========================================= */
+                /* =========================================
+   MEDIA QUERY FOR MOBILE DEVICES (Tablets & Phones)
+   Max-width: 768px
+   ========================================= */
+
+   /* =========================================
+   MOBILE FIXES (Max-width: 768px)
+   ========================================= */
+@media screen and (max-width: 768px) {
+
+    /* 1. THE HEADER TEXT */
+    .selff h2 {
+        font-size: 1.2rem;       /* Make text smaller to fit */
+        padding-right: 0;        /* Remove side padding */
+        margin-top: 10px;
+    }
+
+    /* 2.  THE MAIN WHITE CARD (Crucial) */
+    .isr {
+        width: 95% !important;   /* Force card to be wide on mobile */
+        height: auto;            /* Let it grow tall if needed */
+        margin-bottom: 20px;
+        padding: 15px 5px;       /* Add breathing room inside */
+    }
+
+    /* 3. THE INPUT LABELS */
+    .isr2 {
+        flex-direction: column;  /* Stack radio buttons vertically if needed */
+        align-items: flex-start; /* Align left */
+        padding-left: 15px;      /* Move away from the edge */
+        font-size: 1rem;
+    }
+    
+    .isr2 label {
+        margin-bottom: 8px;      /* Space out the options */
+    }
+
+    /* 4.  THE BUTTONS (Make them tappable) */
+    .conbac {
+        justify-content: space-around; /* Spread them out evenly */
+        padding-right: 0;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .con, .bac {
+        width: 40% !important;   /* Make buttons wide (40% of card each) */
+        padding: 10px 0;         /* Make them taller/easier to tap */
+        font-size: 1rem;
+    }
+    
+   /* 5. THE FOOTER */
+    .sec24 {
+        flex-direction: row;     /* Keep icons in a row */
+        flex-wrap: wrap;         /* Allow wrapping if needed */
+        justify-content: center; /* Center them */
+        padding: 20px 0;
+        gap: 15px;               /* Space between icons */
+        height: auto;            /* Ensure the bar is visible */
+    }
+
+    .sec24 img {
+        width: 30px !important;  /* Force a fixed pixel size for icons */
+        height: auto;
+        display: block;          /* Ensures image respects the width */
+    }
+    
+    /* Only hide the text separators (|) and paragraph text */
+    .sec24 span, .sec24 p {
+        display: none; 
+    }
+    
+    /* Ensure the links (which hold the icons) are VISIBLE */
+    .sec24 a {
+        display: inline-block;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    /* 1. Make the body fill the entire screen height */
+    body {
+        min-height: 100vh;       /* Force body to be at least 100% of screen height */
+        display: flex;           /* Turn on Flexbox for the whole page */
+        flex-direction: column;  /* Stack items vertically (Header -> Card -> Footer) */
+        margin: 0;               /* Remove default browser margins */
+    }
+
+    /* 2. Push the footer to the bottom */
+    .sec24 {
+        margin-top: auto;        /* This magically pushes the footer to the bottom edge */
+        width: 100%;             /* Ensure it stretches full width */
+        box-sizing: border-box;  /* Includes padding in width calculation so it doesn't overflow */
+    }
+
+    /* ... keep your other mobile styles (h2, isr, etc.) here ... */
+}
+
+
+/* UBA Internet Banking Instant Self-Registration (Retail) */
+
+
+body{
+ /* It will try Lato first, then Roboto, then Open Sans, then system fonts */
+    font-family: 'Lato', 'Roboto', 'Open Sans', Arial, Helvetica, sans-serif;
+    background-color: rgb(247,249,246);
+}
+
+/* Section 25 */
+.sec25{
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+  height: 18vh;
+  width: 100%;
+  background-color: #f1f1f1;
+  /* using opacity for the box shadow */
+  box-shadow:0px 4px 15px rgba(0, 0, 0, 0.5) ;
+  border-radius: 5px;
+  padding: 2% 3%;
+}
+
+.sec25 img{
+  width: 95%;
+  height: auto;
+}
+
+/* Header for Section 26 */
+.retail{
+  text-align: center;
+  padding: 0 5%;
+}
+
+.retail h2{
+   color: rgb(23, 23, 23);
+   font-weight: 700;
+   font-size: 1.7rem;
+   text-align: center;
+   margin-top: 3%;
+   margin-bottom: 8px;
+   padding-right: 20%;
+}
+
+/* section 26 */
+
+.sec26{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.retailcont{
+  width: 60%;
+  height: 85vh;
+  border: 1px solid #e0e0e0 ;
+  background-color: rgb(255, 255, 255) ;
+  border-radius: 6px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom:4%;
+  
+}
+
+.cardinput {
+     display: flex;  
+      /* Allows wrapping on smaller screens */          
+     flex-wrap: wrap;         
+     align-items: flex-start;  
+     gap: 2%;              
+     /* width: 100%; */
+}
+
+/* 2. Control the Image Section */
+.cardinput > div:first-child {
+  /* Takes up available space */
+    flex: 1;                  
+    max-width: 45%;          
+}
+ 
+/* for the img in the box */
+.cardinput img {
+    width: 100%;              
+    height: 60vh;
+    /* object-fit: contain; */
+}
+
+/* 3. Control the Form Section */
+.inputarea {
+    flex: 1;  
+    /* Takes up equal or remaining space */                
+    min-width: 300px;         
+}
+
+
+.sec26 h3{
+  font-weight: 700;
+  font-size: 1.2rem;
+  color:rgb(117, 117, 117);
+  padding-top: 3%;
+  padding-left: 5px;
+}
+
+.sec26 p{
+  font-weight: 500;
+  font-size: 1.1rem;
+  color:rgb(117, 117, 117);
+  padding-top: 3%;
+  margin-bottom: 2%;
+  padding-left: 5px;
+
+}
+
+.redd{
+  text-decoration: none;
+  color: red;
+  cursor: pointer;
+}
+
+.inputgroup{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.inputgroup label{
+  font-weight: 500;
+  font-size: 1.1rem;
+  color:rgb(117, 117, 117);
+  /* padding-right: 5%; */
+  margin-right: 5%;
+
+
+}
+
+.inputarea h3{
+  color: red;
+  margin-top: 0;
+
+}
+
+.star{
+  color: red;
+}
+
+.inputarea input{
+  width: 45%;
+  /* remove the input default border */
+  border: none;
+  border-bottom: 1px solid #ccc;
+
+}
+ 
+/* focus/ when click on input, the line change to red */
+.inputarea input:focus {
+    border-bottom: 2px solid #d32f2f;
+    /* remove the default blue glow */
+    outline: none;
+}
+
+.conbac2{
+  display: flex;
+  justify-content: flex-end;
+  gap: 2%;
+  width: 100%;
+  padding-right: 1%;
+  padding-top: 2%;
+  
+}
+ 
+/* styling Button */
+
+.con1{
+  width: 16%;
+  height: auto;
+  border-radius: 3px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.con1 a{
+  text-decoration: none;
+  color: white;
+}
+
+.bac2{
+  width: 12%;
+  height: auto;
+  border-radius: 3px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* section 27 */
+    .sec27{
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(59,56,55);
+            white-space: nowrap;
+            /* that first number of 1% work for both padding top & bottom */
+            /* that last number of 5% work for both padding right & left */  
+            padding: 1% 5%;
+          }
+
+          .sec27 img{
+            width: 18%;
+            cursor: pointer;
+          }
+
+          .sec27 a{
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 300;
+            font-size: 12px;
+            cursor: pointer;
+          }
+
+          .sec27 span{
+            margin-right: 3px;
+            margin-left: 3px;
+            color: white;
+
+          }
+
+          .sec27 p{
+            color: #ffffff;
+            font-weight: 300;
+            font-size: 10px;
+          }
+
+                     /* =========================================
+    INTSTANT SELF REGISTRATION SECTION 25, 26, 27 MOBILE RESPONSIVENESS
+                ========================================= */
+
+          /* Mobile and Tablet Responsiveness */
+          /* --- Mobile & Tablet Polish --- */
+@media screen and (max-width: 768px) {
+
+    /* 1. Header Cleanup */
+    .retail h2 {
+        font-size: 1.3rem !important; /* Smaller text for mobile */
+        padding-right: 0 !important;  /* Remove side padding */
+        margin-top: 15px !important;
+        line-height: 1.4;             /* Better spacing between lines */
+    }
+
+    /* 2. Main Card Layout */
+    .retailcont {
+        width: 92% !important;        /* Give it nice side margins */
+        margin: 0 auto 40px auto;     /* Center it and add bottom space */
+        height: auto !important;      /* Let it grow with content */
+    }
+
+    /* 3. Stack Image and Form */
+    .cardinput {
+        display: flex;
+        flex-direction: column !important; /* Stack vertically */
+        gap: 0;
+    }
+
+    /* 4. Image Styling */
+    .cardinput > div:first-child {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .cardinput img {
+        width: 100%;
+        height: 180px;            /* Fixed height to save space */
+        object-fit: contain;      /* Shows the whole lady without cropping her head */
+        background-color: #f9f9f9; /* Blend background if needed */
+        margin-top: 10px;
+    }
+
+    /* 5. Form Input Improvements */
+    .inputarea {
+        width: 100% !important;
+        padding: 20px !important; /* Breathing room inside the box */
+        box-sizing: border-box;
+    }
+
+    .inputarea input {
+        width: 100% !important;
+        font-size: 16px;          /* Prevents iPhone from zooming in when typing */
+        padding: 8px 0;
+    }
+
+    /* 6. BUTTON FIX (Crucial) */
+    .conbac2 {
+        display: flex !important;
+        justify-content: space-between !important; /* Push buttons apart */
+        gap: 10px;
+        padding-top: 20px;
+        padding-right: 0 !important;
+        width: 100%;
+    }
+
+    /* Make the buttons big and tappable */
+    .con1, .bac2 {
+        width: 48% !important;    /* Each button takes half screen */
+        padding: 12px 0 !important; /* Taller button for easier tapping */
+        text-align: center;
+        font-size: 1rem;
+        display: block;           /* Ensures width is respected */
+    }
+
+    /* 7. Footer Polish (FIXED: Row Layout) */
+    .sec27 {
+        position: relative !important; /* Keep this so it doesn't block content */
+        display: flex !important;
+        flex-direction: row !important; /* Force items side-by-side */
+        flex-wrap: wrap !important;     /* Allow wrapping if screen is very small */
+        justify-content: center !important; /* Center the icons/text */
+        align-items: center !important;
+        padding: 20px 10px;
+        gap: 15px; /* Space between logo and text */
+        white-space: normal !important; /* Allow text to wrap cleanly */
+    }
+
+    /* Control the Icon sizes */
+    .sec27 img {
+        width: auto !important; /* Don't stretch them */
+        height: 25px !important; /* Fix the height so they are small and tidy */
+        margin: 0 5px; /* Small space between icons */
+    }
+
+    /* Ensure text is readable and doesn't stretch */
+    .sec27 a, .sec27 p {
+        font-size: 10px !important;
+        width: auto;
+        margin: 0;
+    }
+}
+
+
+body{
+ /* It will try Lato first, then Roboto, then Open Sans, then system fonts */
+    font-family: 'Lato', 'Roboto', 'Open Sans', Arial, Helvetica, sans-serif;
+    background-color: rgb(247,249,246);
+}
+
+/* section 28 */
+.sec28{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 20px 0;
+       position: static !important; 
+       
+      }
+      /* the hamburger menu display on mobile */
+      .menuham{
+        display: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: #333;
+        padding: 10px;
+      }
+
+   /* sel class for drop down iccon */
+        .sel{
+          margin-left:7px;
+          color: #888;
+        }
+
+   /* Left Navbar Div */
+      .leftnav{
+        display: flex;
+        align-items: center;
+
+      }
+
+   /* class for all the link in leftnav  */
+      .navlink{
+        display: flex ;
+        align-items: center;
+        gap: 45px !important;
+        height: 100% ;
+      }
+
+   /* the text in link for font, color, weight  */
+      .leftnav a{
+        font-family: UBA Sans, Roboto, sans-serif;
+        color: rgb(23, 23, 23);
+        line-height: 1.5rem;  
+         /* 1rem equal 16px */
+        font-size: 1rem;  
+        font-weight:500;
+        text-decoration: none;
+      }
+
+       
+      /* working on the dropdown wrap */
+      .dropdownwrap{
+        /*  dropdown items to align with the full-width */
+        position: static !important;
+        /*dropdown to sit as inline or side by side */
+        display: inline-block;
+        
+      }
+
+      .megamenu.active{
+        /* Shows the menu with Flex layout */
+        display: flex;
+      }
+
+      .megamenu{
+        /* Default state: Hidden */
+        display: none;
+        justify-content: space-between;
+        gap: 20px;
+        cursor: pointer;
+        position: absolute;
+        top: 80px ;
+        left: 0 ;
+        width: 100% ;
+        background-color:#fff;
+        z-index: 1000;
+        padding: 30px;
+        box-sizing: border-box;
+      }
+
+       .col{
+       /* This makes all 4 columns EXACTLY the same width */
+      flex: 1;
+      display: flex;
+      /* Stacks items vertically inside the column */
+      flex-direction: column; 
+      gap: 20px; 
+      }
+
+      .menucard{
+        /* Moved here so it occupies space permanently */
+        padding: 15px;            
+        border-radius: 12px;
+        background-color: transparent;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+  
+      .menucard:hover{
+        background-color: #f9f9f9; 
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+       transform: translateY(-5px);
+      }
+
+      .menucard h3{
+        font-family: UBA Sans, Roboto, sans-serif;
+        color: rgb(23, 23, 23);
+        font-size: 1.1rem;  
+        font-weight:600;
+        margin-bottom:5px;
+      }
+
+      .menucard p{
+        font-family: UBA Sans, Roboto, sans-serif;
+        color:#525252;
+        font-size: 1rem;  
+        font-weight:400;
+      }
+
+
+      /* header link in red color */
+      .mc{
+        color: red  !important ;
+        margin-bottom: 15px !important;
+      }   
+
+        /* the last div of col is the last child */
+      .col:last-child{
+        border-left: 1px solid #e0e0e0;
+        padding-left: 20px;
+      }
+
+      .col a{
+        font-family: UBA Sans, Roboto, sans-serif;
+        color: #555; 
+        font-size:0.95rem;  
+        font-weight:600;
+        /* treat the link as block element */
+        display: block;     
+      }
+
+      .col a:hover{
+        text-decoration: underline;
+        color: red;
+      }  
+
+      /* the icon arrow in front of those links */
+      .aro{
+        margin-left: 7px;
+
+      }
+
+      
+  /* Right Navbar Div */
+      .rightnav{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+
+  /* the text in link for font, color, weight  */
+      .rightnav a{
+         font-family: UBA Sans, Roboto, sans-serif;
+         color: rgb(23, 23, 23);
+         line-height: 1.5rem;
+         font-size: 1rem;  
+         font-weight:500;
+         text-decoration: none;
+         /* all text in section 1 to be on a single straight line & never break */
+         white-space: nowrap;
+      }
+
+   /* button borderbox */
+      .rightnav button{
+        display: flex;
+        align-items: center;
+       /* let it decides and fit by itself */
+        width: auto;
+       /* text in the box to be on a single straight line */
+        white-space: nowrap;
+        gap: 6px;
+        border: 1px solid #555;
+        padding: 10px;
+        border-radius: 7px;
+       /* ensure it matches the already background */
+        background-color: transparent;
+        font-family: UBA Sans, Roboto, sans-serif;
+        color: rgb(23, 23, 23);
+        line-height: 1.5rem;
+        font-size: 1rem;  
+        font-weight:500;
+        cursor: pointer;
+      }
+
+     /* hover effect on button */
+      .rightnav button:hover{
+        background-color:#d8232a;
+        color: rgb(255, 255, 255);
+      }
+       /* hover with border effect on account opening */
+      .rightnav .accopen:hover{
+        background-color:#d8232a;
+        color: rgb(255, 255, 255);
+        border: 1px solid #555;
+        padding: 10px;
+        border-radius: 7px;
+      }
+
+    /* image logo */   
+      .rightnav img{
+        width: 32%;
+      }
+
+      /* MEDIA QUERIES (Responsiveness)*/
+       /* --- SECTION 28 RESPONSIVENESS (Digital & Customize Cards) --- */
+
+
+      /* --- Tablet / Small Laptop (max-width: 1024px) --- */
+@media (max-width: 1024px) {   /* <--- Added missing bracket here */
+    .sec28 {
+        padding: 20px;
+    }
+
+      .rightnav {
+        gap: 15px;
+    }
+    .leftnav a, 
+    .rightnav a {
+        font-size: 0.9rem;
+    }
+}
+/* --- MOBILE VIEW (max-width: 768px) --- */
+@media (max-width: 768px) {
+    
+    /* 1. SECTION 1: Keep it in a Row (Side-by-Side) */
+    .sec1 {
+        flex-direction: row;      /* Keep them on the same line */
+        justify-content: space-between; /* Push Menu to left, Logo to right */
+        align-items: center;
+        height: auto;
+        padding: 15px 20px;       /* Nice padding */
+    }
+
+    /* 2. SHOW THE HAMBURGER MENU */
+    .menuham {
+        display: block;           /* Reveal the icon! */
+    }
+
+    /* 3. HIDE THE CLUTTER (Links & Buttons) */
+    .leftnav {
+        display: none;            /* Hides "Personal", "Business", etc. */
+    }
+
+    /* Target specific items in Right Nav to hide them, but KEEP THE LOGO */
+    .rightnav a,          /* Hides "Open an account" */
+    .rightnav button {    /* Hides "Internet Banking" button */
+        display: none;
+    }
+
+    /* 4. Ensure the Logo (inside rightnav) stays visible */
+    .rightnav {
+        display: flex;    /* Keep the container active */
+        width: auto;      /* Let it shrink to fit just the logo */
+    }
+    
+    .rightnav img {
+        width: 80px;      /* Adjust logo size for mobile */
+        display: block;
+    }
+}
+
+/* section 29 */
+
+.sec29{
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 5%;
+  margin-top:5%;
+
+}
+
+.faad{
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.faad h1{
+  font-family: UBA Sans, Roboto, sans-serif;
+  color: rgb(23, 23, 23);
+  line-height: 2rem;
+  font-size: 2.5rem;  
+  font-weight:800;
+  margin-bottom: 5%;
+
+}
+
+.faad p{
+  font-family: UBA Sans, Roboto, sans-serif;
+  color: rgb(23, 23, 23);
+  line-height: 1.5rem;
+  font-size: 1.2rem;  
+  font-weight:400;
+ 
+}
+
+
+/* section 30 */
+
+.sec30{
+  padding: 0 5%;
+  margin-top: 6%;
+}
+
+.faqlist{
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  cursor: pointer;
+  margin-bottom: 2%;
+}
+
+.faqlist h3{
+  font-family: UBA Sans, Roboto, sans-serif;
+  color: rgb(23, 23, 23);
+  line-height: 1.6rem;
+  font-size: 1.2rem;  
+  font-weight:400;
+
+}
+
+.faqlist h3:hover{
+  text-decoration: underline #d8232a 3px solid;
+  font-weight: 500;
+  
+}
+
+/* section 31 */
+.sec31{
+  background-color: rgb(rgb2 45,245,245);
+  padding: 0 5%;
+  
+}
+
+.tab{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  overflow-x: auto;
+
+}
+
+  .tab-button{
+  background-color: transparent;
+  border: none;
+  padding: 15px 25px;
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(23, 23, 23);
+  font-weight: 400;
+  border-radius: 8px;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.tab-button.active {
+  background-color: #e0e0e0;
+  color: rgb(64, 64, 64);
+  font-weight:700;
+}
+
+.tab-button:hover {
+  background-color: #eee;
+}
+
+/* the big container inside */
+.tab-content{
+  background-color: rgba(255, 255, 255, 0.7); 
+  backdrop-filter: blur(10px);
+  border-radius: 20px; 
+  border: 1px solid rgba(255, 255, 255, 0.5); 
+  margin-top: 10px;
+  margin-bottom: 5%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
+  padding: 30px;
+}
+
+.tab-content h3 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* ---  DROPDOWNS & RED ICONS --- */
+details {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  /* the border line below each single faqs */
+  margin-bottom: 15px;
+}
+
+summary {
+  cursor: pointer;
+  /* Hides default triangle */
+  list-style: none; 
+  padding: 12px 0 12px 45px; 
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/* Fix for Chrome/Safari markers */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* The Plus (+) Icon */
+summary::before {
+  content: '+';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #d32f2f;
+  border-radius: 50%;
+  color: #d32f2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+/* The Minus (-) Icon when open */
+details[open] summary::before {
+  content: '-';
+  background-color: #d32f2f;
+  color: white;
+}
+
+/* Answer Text */
+.answer {
+  padding: 5px 0 20px 45px;
+  color: rgb(82, 82, 82);
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.answer a {
+  color: #d32f2f;
+  /* for all the link inside the details */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* for all the phone number inside answer  */
+.phone{
+  color: #d32f2f;
+}
+
+/* =========================================
+      SECTION 29, 30, 31 MOBILE RESPONSIVENESS
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+
+  /* --- SECTION 29 ADJUSTMENTS (Header Area) --- */
+  .sec29 {
+    flex-direction: column; /* Stacks items vertically */
+    padding: 0 5%;
+    margin-top: 10%; /* More breathing room on top */
+  }
+
+  .faad {
+    width: 100%; /* Allows text to take full screen width */
+    margin-bottom: 20px;
+  }
+
+  .faad h1 {
+    font-size: 1.8rem; /* Scale down from 2.5rem */
+    line-height: 2.2rem;
+    margin-bottom: 15px;
+  }
+
+  .faad p {
+    font-size: 1rem; /* Scale down from 1.2rem */
+    line-height: 1.5rem;
+  }
+
+  /* --- SECTION 30 ADJUSTMENTS (Links List) --- */
+  .sec30 {
+    margin-top: 10%;
+  }
+
+  .faqlist {
+    flex-wrap: wrap; /* Allows links to wrap to next line if needed */
+    gap: 15px;
+  }
+
+  .faqlist h3 {
+    font-size: 1rem; /* Slightly smaller text */
+  }
+}
+
+  .tab {
+    display: flex;
+    /* NO WRAP: Keeps all 3 buttons on the same line */
+    flex-wrap: nowrap;     
+    justify-content: space-between; 
+    gap: 5px;             /* Tiny gap to save space */
+    padding: 0;           /* Remove padding to use full width */
+    margin-bottom: 20px;
+    overflow-x: hidden;   /* Disable scrolling */
+  }
+
+  /* Hide scrollbars */
+  .tab::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-button {
+    /* KEY FIX: 'flex: 1' makes all 3 buttons share width equally (33% each) */
+    flex: 1; 
+    
+    /* TEXT STACKING MAGIC */
+    white-space: normal;    /* Allows text to break into new lines */
+    word-wrap: break-word;  /* Prevents long words from cutting off */
+    text-align: center;     /* Centers the stacked text */
+    
+    /* Formatting */
+    font-size: 13px;        /* Small readable size */
+    padding: 10px 2px;      /* Minimal side padding to fit text */
+    line-height: 1.2;       /* Tighter spacing between the stacked lines */
+    
+    /* Vertical Alignment (Centers text vertically inside the box) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;       /* Ensures buttons are tall enough for the stacked text */
+  }
+
+
+  
+ /* Section 32 */
+ 
+       .sec32{
+        display: flex;
+        justify-content: space-between;
+        gap: 5%;
+        padding-top: 5%;
+       /* space in left when start */
+        padding-left: 5%;
+       /* space in right when end */
+        padding-right: 5%;
+        background-color: #262626;
+       }
+
+      /* selecting all in common at once for h3 */
+       .sec32 h3{
+        color: #e0e0e0;
+        font-family: UBA Sans, Roboto, sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        padding-bottom: 20px;
+        line-height: 20px;
+       }
+          
+       /*  for all the ul & li command */
+       .sec32 li{
+        list-style-type: none;
+        padding-bottom: 20px;
+       }
+
+         /* selecting all in common at once for a attribute/links */
+      .sec32 a{
+        text-decoration: none;
+        color: rgb(169, 169, 169) ;
+        cursor: pointer;
+     
+      }
+       /* hover effect on every link */
+      .sec32 a:hover{
+        text-decoration: underline;
+        color: rgb(169, 169, 169) ;
+
+      }
+
+      /* the last h3 was seperate and given a unique class */
+      .gettheapp{
+        padding-top: 20px;
+      }
+  
+       /* the ul that carry  bunch of img was given a unique class */
+      .connect img{
+        width: 20%;
+        padding-right:7px;
+      }
+
+   /* the last img was seperate and given a div class */
+      .getthe{
+        width: 50%;
+        padding-bottom: 10%;
+      }
+
+      /* =========================================
+      SECTION 32 MOBILE RESPONSIVENESS
+   ========================================= */
+   @media screen and (max-width: 768px) {
+
+  .sec32 {
+    flex-direction: column; 
+    gap: 40px; 
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .getthe {
+    width: 100%; 
+  }
+
+  /* RULE 1: Shrink ALL images in sec11 (Social Icons ) */
+  .sec32 img {
+    width: 30px !important; 
+    height: auto !important;
+  }
+
+  /* RULE 2: "Un-shrink" ONLY the App Buttons inside .getthe */
+  .sec32 .getthe img {
+    width: 135px !important; /* Standard size for app buttons */
+    margin-top: 10px;
+  }
+}
+
+       /* section 33 */
+ 
+       /* the tiny last part of the Landing Page */
+         .sec33{
+            background-color:#0a0a0a ; 
+            text-align:left;
+            /* space in left when start */
+            padding-left: 5%;
+            font-size: 14px;
+            font-weight: 400;
+            color: white;
+            width: 100%;
+            height: 20vh;
+            padding-top: 2%;
+         }
+     
+      /* =========================================
+      SECTION 33 MOBILE RESPONSIVENESS
+   ========================================= */
+    
+  /* --- Section 33 Mobile Adjustments (Copyright) --- */
+     
+       @media screen and (max-width: 768px) {
+  .sec33 {
+    height: auto; /* Remove fixed height */
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center; /* Center the copyright text */
+    padding-right: 5%; /* specific padding for alignment */
+  }
+}
+

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Keywords"
+    content="banking, UBA, Nigeria, finance, loans, accounts, services, investments, digital banking,mobile banking, digital banking, UBA mobile app, open UBA account, UBA savings account, UBA current account, bank transfer, money transfer, payments, UBA loans, financial services, secure banking, internet banking, personal banking, business banking, corporate banking, ATM locator, customer support, UBA cards, debit cards, prepaid cards, banking solutions, fast transactions, secure transactions">
+  <title>Home-UBA Nigeria</title>
+  <!-- using Roboto font cos UBA font is not in public -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="uba.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <!-- Section 1 -->
+    <div class="sec1">
+      <!-- the hamburger menu display on mobile -->
+      <div class="menuham">&#9776;</div>
+
+      <div class="leftnav">
+        <nav class="navlink">
+          <a href=""> <img src="/Gallery/HomeIcon.png" alt="homeIcon"></a>
+
+          <!-- For Personal Dropdown -->
+          <div class="dropdownwrap">
+            <a href="#" class="trigger-link" onclick="toggleDropdown('personal-menu')">
+              Personal <i class="fa-solid fa-angle-down"></i></a>
+            <div id="personal-menu" class="megamenu">
+
+
+              <div class="col">
+                <div class="menucard">
+                  <h3>Accounts</h3>
+                  <p>We create accounts tailored to your individual needs.</p>
+                </div>
+
+                <div class="menucard">
+                  <h3>Loan</h3>
+                  <p>Need funds for a side hustle, new car or emergency? UBA has loans.</p>
+                </div>
+              </div>
+
+
+              <div class="col">
+                <div class="menucard">
+                  <h3>Digital Banking</h3>
+                  <p>We offer you the choice to access your account anytime, anywhere.</p>
+                </div>
+
+                <div class="menucard">
+                  <h3>Become an Agents</h3>
+                  <p>Enjoy convenient banking with UBA Moni. Open an account and bank!</p>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="menucard">
+                  <h3>Cards</h3>
+                  <p>Our cards are issued to clients that use one or more of our services</p>
+                </div>
+
+                <div class="menucard">
+                  <h3>Foreign Exchange (FX Mart)</h3>
+                  <p>Buy and exchange foreign currency at competitive rates with UBA.</p>
+                </div>
+              </div>
+
+              <div class="col" id="colinks">
+                <h3 class="mc">Quick links</h3>
+                <a class="ql" href="">Savings Accounts <i class="fa-solid fa-arrow-right aro"></i></a><br>
+                <a href="">Remittance Services <i class="fa-solid fa-arrow-right aro"></i></a><br>
+                <a href="">Bancassurance <i class="fa-solid fa-arrow-right aro"></i></a><br>
+              </div>
+
+             </div>
+            </div>
+
+            <!-- For Business Dropdown -->
+            <div class="dropdownwrap">
+              <a href="#" class="trigger-link" onclick="toggleDropdown('business-menu')">
+                Business <i class="fa-solid fa-angle-down"></i></a>
+              <div id="business-menu" class="megamenu">
+                <div class="col">
+                  <div class="menucard">
+                    <h3>Business Account</h3>
+                    <p>Because when businesses complain about lack of support, it should not be you.</p>
+                  </div>
+
+                  <div class="menucard">
+                    <h3>Merchant Services</h3>
+                    <p>Merchant Services at UBA include POS, Instant Bills Pay, UBA Marketplace & U-Collect.</p>
+                  </div>
+                </div>
+
+
+                <div class="col">
+                  <div class="menucard">
+                    <h3>Digital Banking for Business</h3>
+                    <p>Get a reliable and convenient way of receiving money for goods and services.</p>
+                  </div>
+
+                  <div class="menucard">
+                    <h3>Business Registration</h3>
+                    <p>We are supporting our customers to formalise their business by registering it.</p>
+                  </div>
+
+                </div>
+
+                <div class="col">
+                  <div class="menucard">
+                    <h3>Loans and Advance</h3>
+                    <p>The Working Capital loan offers up to ₦50 Million to help business owners meet their cash flow
+                      needs.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col" id="colinks">
+                  <h3 class="mc">Quick links</h3>
+                  <a class="ql" href="">Sectors<i class="fa-solid fa-arrow-right aro"></i></a><br>
+                  <a href="">UBA x AfCFTA<i class="fa-solid fa-arrow-right aro"></i></a><br>
+                  <a href="">UBA Business Direct<i class="fa-solid fa-arrow-right aro"></i></a><br>
+                </div>
+
+               </div>
+              </div>
+
+              <!-- For Corporate Dropdown -->
+              <div class="dropdownwrap">
+                <a href="#" class="trigger-link" onclick="toggleDropdown('corporate-menu')">
+                  Corporate <i class="fa-solid fa-angle-down"></i></a>
+                <div id="corporate-menu" class="megamenu">
+
+
+                  <div class="col">
+                    <div class="menucard">
+                      <h3>Coporate Accounts</h3>
+                      <p>We provide diverse financing products tailored to corporate businesses' unique needs.</p>
+                    </div>
+
+                    <div class="menucard">
+                      <h3>Strategic Advisory & Research</h3>
+                      <p>Our strategy is to become the leading bank of choice for businesses across Africa</p>
+                    </div>
+
+                  </div>
+
+
+                  <div class="col">
+                    <div class="menucard">
+                      <h3>Corporate E-Solutions</h3>
+                      <p>We offer investment services in bonds, treasury bills, and commercial papers.</p>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="menucard">
+                      <h3>Trade Products</h3>
+                      <p>International Trade is an ever-evolving business and we understand the global market</p>
+                    </div>
+                  </div>
+
+                  <div class="col" id="colinks">
+                    <h3 class="mc">Quick links</h3>
+                    <a href="">Treasury Products<i class="fa-solid fa-arrow-right aro"></i></a><br>
+                    <a href="">Energy Banking<i class="fa-solid fa-arrow-right aro"></i></a><br>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- For About us Dropdown -->
+              <div class="dropdownwrap">
+                <a href="#" class="trigger-link" onclick="toggleDropdown('aboutus-menu')">
+                  About Us<i class="fa-solid fa-angle-down"></i></a>
+                <div id="aboutus-menu" class="megamenu">
+
+
+                  <div class="col">
+                    <div class="menucard">
+                      <h3>UBA Nigeria</h3>
+                      <p>We aim to be a role model for African businesses, creating value for all stakeholders.</p>
+                    </div>
+
+                    <div class="menucard">
+                      <h3>Our Shared Values</h3>
+                      <p>Our corporate identity is based on the 3 Es: Enterprise, Excellence, and Execution.</p>
+                    </div>
+                  </div>
+
+
+                  <div class="col">
+                    <div class="menucard">
+                      <h3>Our Leadership</h3>
+                      <p>Our leadership is dedicated to serving clients and fostering excellence.</p>
+                    </div>
+
+                    <div class="menucard">
+                      <h3>Sectors & Alliances</h3>
+                      <p>UBA PLC has formed key strategic alliances to maximise customer satisfaction</p>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="menucard">
+                      <h3>OUR History</h3>
+                      <p>UBA has over 75 years of banking, starting in 1949 with British and French Bank Limited in
+                        Nigeria.</p>
+                    </div>
+
+                    <div class="menucard">
+                      <h3>Initiatives</h3>
+                      <p>We see ourselves as more than a bank, which is why we have launched multiple initiatives</p>
+                    </div>
+                  </div>
+
+                  <div class="col" id="colinks">
+                    <h3 class="mc">Quick links</h3>
+                    <a class="ql" href="">News & Media<i class="fa-solid fa-arrow-right aro"></i></a><br>
+                    <a href="">Investor Information<i class="fa-solid fa-arrow-right aro"></i></a><br>
+                    <a href="">Awards<i class="fa-solid fa-arrow-right aro"></i></a><br>
+                  </div>
+
+                 </div>
+                </div>
+
+
+                <!-- For Support Dropdown -->
+                <div class="dropdownwrap">
+                  <a href="#" class="trigger-link" onclick="toggleDropdown('support-menu')">
+                    Support<i class="fa-solid fa-angle-down"></i></a>
+                  <div id="support-menu" class="megamenu">
+
+
+                    <div class="col">
+                      <div class="menucard">
+                        <h3>Help</h3>
+                        <p>Find the answers and guidance you need in our Help center.</p>
+                      </div>
+
+                      <div class="menucard">
+                        <h3>Self Service</h3>
+                        <p>Access our self-service portal for account management and support.</p>
+                      </div>
+                    </div>
+
+
+                    <div class="col">
+                      <div class="menucard">
+                        <h3>FAQs</h3>
+                        <p><a href="/FAQS.html">Get instant help by browsing through our detailed FAQs.</a></p>
+                      </div>
+
+                      <div class="menucard">
+                        <h3>Bank Verification Number</h3>
+                        <p>Enroll for Biometric Verification Number (BVN) across the World.</p>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="menucard">
+                        <h3>Download Centre</h3>
+                        <p>Explore a range of banking options tailored to your needs.</p>
+                      </div>
+
+                      <div class="menucard">
+                        <h3>Contact Us</h3>
+                        <p>For assistance, contact our team for complaints and enquiries.</p>
+                      </div>
+                    </div>
+
+                    <div class="col" id="colinks">
+                      <h3 class="mc">Quick links</h3>
+                      <a class="ql" href="">Security Centre<i class="fa-solid fa-arrow-right aro"></i></a><br>
+                      <a href="">Tools & Resources<i class="fa-solid fa-arrow-right aro"></i></a><br>
+                      <a href="">Services Charges & Rates<i class="fa-solid fa-arrow-right aro"></i></a><br>
+                    </div>
+
+                  </div>
+                  </div>
+
+        </nav>
+      </div>
+
+      <div class="rightnav">
+        <a class="accopen" href="/accountopening.html">Open an account</a>
+
+        <button><img src="/Gallery/InternetBankingIcon.svg" alt=""><a href="/internetbanking.html">Internet Banking</a></button>
+
+        <img src="/Gallery/UBALogo.svg" alt="">
+      </div>
+
+    </div>
+
+    <!--Section 2 -->
+
+    <div class="sec2">
+
+      <div class="cashitwhen">
+        <img src="/Gallery/CashItWhen.jpg" alt="cashitwhen">
+      </div>
+
+      <div class="vibes">
+        <img src="/Gallery/Vibes.jpg" alt="">
+      </div>
+
+      <div class="time">
+        <h1>Time to Unlock $4 Trillion Capital</h1>
+        <p>UBA Unveils its white paper,a blueprint for driving Africa's transformation from within</p>
+      </div>
+
+      <div class="selfservice">
+        <img src="/Gallery/SelfService.jpg" alt="">
+      </div>
+
+      <div class="youmove">
+        <img src="/Gallery/YouMoveGoods.webp" alt="">
+      </div>
+
+      <div class="award">
+        <img src="/Gallery/AwardImage.jpg" alt="">
+      </div>
+
+      <div class="Atm">
+        <img src="/Gallery/ATMImage.jpg" alt="">
+
+      </div>
+
+    </div>
+
+    <!-- Section 3 -->
+
+    <div class="sec3">
+      <div class="items">
+        <img src="/Gallery/AccountIcon.png" alt="">
+        <h5>Accounts</h5>
+      </div>
+
+      <div class="items">
+        <img src="/Gallery/CardIcon.svg" alt="">
+        <h5>Cards</h5>
+      </div>
+
+      <div class="items">
+        <img src="/Gallery/LoanIcon.svg" alt="">
+        <h5>Loans</h5>
+      </div>
+
+      <div class="items">
+        <img src="/Gallery/Mobileicon.svg" alt="">
+        <h5>Mobile</h5>
+      </div>
+
+      <div class="items">
+        <img src="/Gallery/SelfServiceIcon.svg" alt="">
+        <h5>Self Service</h5>
+      </div>
+
+      <div class="items">
+        <img src="/Gallery/HelpIcon.png" alt="">
+        <h5>Help</h5>
+      </div>
+    </div>
+
+    <!-- section 4 -->
+
+    <div class="sec4">
+
+      <div class="onlineacc">
+        <h2>Online Account Opening</h2>
+        <p>Open an account online in minutes, withdraw from any ATM and get realtime notifications after every
+          transaction.</p>
+        <p><a href="">Open account<i class="fa-solid fa-chevron-right arrowselect" aria-hidden="true"></i></a></i></p>
+        <img src="/Gallery/Open account.webp" alt="">
+      </div>
+
+      <div class="chatwith">
+        <h2>Chat With Leo</h2>
+        <p>Open an account online in minutes, withdraw from any ATM and get realtime notifications after every
+          transaction.</p>
+        <p><a href="">Learn More<i class="fa-solid fa-chevron-right arrowselect" aria-hidden="true"></i></a></p>
+        <img src="/Gallery/Chatleo.webp" alt="">
+
+      </div>
+    </div>
+
+    <!-- Section 5 -->
+
+    <div class="sec5">
+
+      <div class="personal">
+        <h2>Personal Banking</h2>
+        <p>We cater for your innermost needs by giving you an array of banking options that suit your personality.</p>
+        <p><a href="">Learn more<i class="fa-solid fa-chevron-right arrowselect" aria-hidden="true"></i></a></i></p>
+        <img src="/Gallery/Personal Banking.webp" alt="">
+      </div>
+
+      <div class="business">
+        <h2>Business Solutions</h2>
+        <p>At UBA, we are committed to the development of the real sectors of the economy.</p>
+        <p><a href="">Learn More<i class="fa-solid fa-chevron-right arrowselect" aria-hidden="true"></i></a></p>
+        <img src="/Gallery/BusinessSolution.webp" alt="">
+      </div>
+    </div>
+
+    <!-- section 6 -->
+
+    <div class="sec6">
+
+      <div class="digital">
+        <h2>Digital Banking</h2>
+        <p>Our digital solutions offer various benefits that will ensure you stay in control wherever you are.</p>
+        <p><a href="">Learn more<i class="fa-solid fa-chevron-right arrowselect" aria-hidden="true"></i></a></i></p>
+        <img src="/Gallery/DigitalBanking.webp" alt="">
+      </div>
+
+      <div class="customize">
+        <h2>Customize your updates</h2>
+        <p>Sign up for content that interest you the most</p>
+
+        <div class="form">
+          <input class="input1" type="text" placeholder="Full Name"> <br>
+          <input class="input2" type="email" placeholder="Email"> <br>
+          <input class="input3" type="tel" placeholder="Phone Number"> <br>
+
+        </div>
+
+        <p class="sel">Select your interest</p>
+
+        <div class="checkboxall">
+
+
+          <input type="checkbox" id="interest" name="interest" value="Annual Reports">
+          <label for="interest1" class="">Annual Reports</label>
+
+          <input type="checkbox" id="interest" name="interest" value="Interimn Reports">
+          <label for="interest2">Interimn Reports</label>
+
+          <input type="checkbox" id="interest" name="interest" value="Events">
+          <label for="interest3">Events</label> <br>
+
+          <input type="checkbox" id="interest" name="interest" value="Job Openinings">
+          <label for="interest4">Job Openinings</label>
+
+          <input type="checkbox" id="interest" name="interest" value="Latest News">
+          <label for="interest5">Latest News</label>
+
+          <input type="checkbox" id="interest" name="interest" value="UBA Foundation">
+          <label for="interest6">UBA Foundation</label>
+        </div>
+
+        <p>By clicking “Continue”, I agree to the <a class="terms" href="">terms and conditions</a> of use.</p>
+
+        <p><a href="">Continue<i class="fa-solid fa-chevron-right arrowselect" aria-hidden="true"></i></a></i></p>
+      </div>
+
+    </div>
+
+    <!-- Section 7 -->
+    <div class="sec7">
+
+      <div class="nigeriastock">
+
+        <h2>Nigeria Stocks</h2>
+        <p>Updates on the performance of key Nigeria stocks</p>
+
+        <!-- Header of symbol and price -->
+        <div class="th1">
+          <div>
+            <p>Symbol</p>
+          </div>
+          <div>
+            <p>Price</p>
+          </div>
+
+        </div>
+
+        <!-- each line for right & left side -->
+        <!-- 2 div inside  the parent div coz it 2 row -->
+        <div class="line">
+          <div class="leftside">
+            <span class="ticker">DANGCEM</span>
+            <span class="company">Dangote Cement Plc</span>
+          </div>
+          <div class="rightside">
+            <span class="price">614.9</span>
+            <span class="change">0%</span>
+          </div>
+        </div>
+
+        <div class="line">
+          <div class="leftside">
+            <span class="ticker">AIRTELAFRI</span>
+            <span class="company">Airtel Africa Plc</span>
+          </div>
+          <div class="rightside">
+            <span class="price">2270</span>
+          </div>
+        </div>
+
+        <div class="line">
+          <div class="leftside">
+            <span class="ticker">MTNN</span>
+            <span class="company">Mtn Nigeria Communication Plc</span>
+          </div>
+          <div class="rightside">
+            <span class="price">531.7</span>
+          </div>
+        </div>
+
+        <div class="line">
+          <div class="leftside">
+            <span class="ticker">UBA</span>
+            <span class="company">United Bank for Africa</span>
+          </div>
+          <div class="rightside">
+            <span class="price">40</span>
+            <span class="change">0.755668%</span>
+          </div>
+        </div>
+
+        <p><small>Information is for reference only and may change during the day as market conditions
+            fluctuate.</small>
+        </p>
+
+      </div>
+
+
+      <div class="exchangerate">
+        <h2>Exchange Rates</h2>
+        <p>UBA nigeria</p>
+        <!-- Header of currency and rate -->
+        <div class="th2">
+          <div class="currency">Currency</div>
+          <div class="rate">Buy</div>
+          <div class="rate">Sell</div>
+        </div>
+
+        <!-- 3 div inside  the parent div coz it 3 row -->
+        <div class="line2">
+          <div class="currency">
+            <img src="/Gallery/USDollar.png" alt="">
+            <span class="name">US Dollar (USD)</span>
+          </div>
+
+          <div class="rate">₦1438</div>
+          <div class="rate">₦1467</div>
+        </div>
+
+        <div class="line2">
+          <div class="currency">
+            <img src="/Gallery/Euro.png" alt="">
+            <span class="name">Euro (EUR)</span>
+          </div>
+
+          <div class="rate">₦1693</div>
+          <div class="rate">₦1727</div>
+        </div>
+
+        <div class="line2">
+          <div class="currency">
+            <img src="/Gallery/Pound.png" alt="">
+            <span class="name">Pound (GBP)</span>
+          </div>
+
+          <div class="rate">₦1926</div>
+          <div class="rate">₦1965</div>
+        </div>
+
+
+        <div class="line2">
+          <div class="currency">
+            <img src="/Gallery/Canadian.png" alt="">
+            <span class="name">Canadian Dollar (CAD)</span>
+          </div>
+
+          <div class="rate">₦1046</div>
+          <div class="rate">₦1067</div>
+        </div>
+
+        <div class="line2">
+          <div class="currency">
+            <img src="/Gallery/SwissFranc.png" alt="">
+            <span class="name">Swiss Franc (CHF)</span>
+          </div>
+
+          <div class="rate">₦1808</div>
+          <div class="rate">₦1845</div>
+        </div>
+
+        <p><small>Information on foreign currency exchange rates is for reference only and may change during the day.
+            Exact information about the rates can be found at the bank.</small></p>
+      </div>
+
+    </div>
+
+    <!-- Section 8 -->
+    <div class="sec8">
+      <h2>Banking Solutions For Your Needs</h2>
+      <div class="cardlink">
+        <a href="">Digital Solutions</a>
+        <a href="">Find the Right Card</a>
+        <a href="">Payment Technologies</a>
+      </div>
+    </div>
+
+
+    <!-- Section 9 -->
+    <div class="sec9">
+
+      <div class="prepaid">
+        <h2>Prepaid Cards</h2>
+        <p>The UBA prepaid card is pre-funded and re-loadable</p>
+        <p><a href="">Open account<i class="fa-solid fa-chevron-right arrowselect" aria-hidden="true"></i></a></i></p>
+        <img src="/Gallery/Prepaid.webp" alt="">
+      </div>
+
+
+      <div class="credit">
+        <h2>Credit Cards</h2>
+        <p>One Card, endless possibilities. Get 0% interest with your credit card.</p>
+        <p><a href="">Open account<i class="fa-solid fa-chevron-right arrowselect" aria-hidden="true"></i></a></i></p>
+        <img src="/Gallery/Credit.webp" alt="">
+      </div>
+
+      <div class="debit">
+        <h2>Debit Cards</h2>
+        <p>wherever you are,there is a USB Debit card made for you card.</p>
+        <p><a href="">Open account<i class="fa-solid fa-chevron-right arrowselect" aria-hidden="true"></i></a></i></p>
+        <img src="/Gallery/Debit.webp" alt="">
+      </div>
+
+    </div>
+
+    <!-- Section 10 -->
+    <div class="sec10">
+      <div class="mobile">
+        <div class="mobileleft">
+          <img class="applogo" src="/Gallery/UbaAppslogo.svg" alt="">
+          <h1>UBA mobile application</h1>
+          <p>Check your balance, pay for services, open accounts, deposits, loans, get help in chat 24/7 and much more -
+            in your smartphone</p>
+          <div class="store">
+            <img class="storee" src="/Gallery/MobileAppleStore.svg" alt="">
+            <img class="storee" src="/Gallery/MobileGoogleStore.svg" alt="">
+          </div>
+        </div>
+
+        <div class="mobileright">
+          <img src="/Gallery/UBAphonefaceID.webp" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 11 -->
+    <footer>
+      <div class="sec11">
+        <div class="footer1">
+          <h3>Personal</h3>
+          <ul>
+            <li><a href="">Accounts</a></li>
+            <li><a href="">Digital Banking</a></li>
+            <li><a href="">Professional Courses</a></li>
+            <li><a href="">Cards</a></li>
+            <li><a href="">Loans</a></li>
+            <li><a href="">Int'l Money Transfers</a></li>
+            <li><a href="">Foreign Exchange(FX Mart)</a></li>
+            <li><a href="">Become an Agent</a></li>
+            <li><a href="">Remittance Services</a></li>
+            <li><a href="">Bancassurance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer2">
+          <h3>Business</h3>
+          <ul>
+            <li><a href="">Business Account</a></li>
+            <li><a href="">Digital Banking for <br>business</a></li>
+            <li><a href="">Loans and Advances</a></li>
+            <li><a href="">Merchant Services</a></li>
+            <li><a href="">Business Registration</a></li>
+            <li><a href="">UBA x AFCFTA</a></li>
+          </ul>
+        </div>
+
+        <div class="footer3">
+          <h3>Corporate</h3>
+          <ul>
+            <li><a href="">Corporate E-Solutions</a></li>
+            <li><a href="">Trade Products</a></li>
+            <li><a href="">Strategic Advisory & Research</a></li>
+            <li><a href="">UBA Business Direct</a></li>
+            <li><a href="">Energy Banking</a></li>
+          </ul>
+        </div>
+
+        <div class="footer4">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="">UBA Nigeria </a></li>
+            <li><a href="">Our Leadership</a></li>
+            <li><a href="">Our History</a></li>
+            <li><a href="">Our Shared Values</a></li>
+            <li><a href="">Sectors & Alliances</a></li>
+            <li><a href="">Initiatives</a></li>
+            <li><a href="">News & Media</a></li>
+            <li><a href="">Investor Information</a></li>
+            <li><a href="">Awards</a></li>
+          </ul>
+        </div>
+
+        <div class="footer5">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="">Self Service</a></li>
+            <li><a href="/FAQS.html">FAQS</a></li>
+            <li><a href="">Bank Verification Number</a></li>
+            <li><a href="">Download Centre</a></li>
+            <li><a href="">Security Centre</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">Terms & Conditions</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">ATM/Branch Locator</a></li>
+            <li><a href="">Help</a></li>
+          </ul>
+        </div>
+
+
+        <div class="footer6">
+          <h3>Connect</h3>
+          <ul class="connect">
+            <li><img src="/Gallery/Facebook.png" alt=""><a href="">Facebook</a></li>
+            <li><img src="/Gallery/TwitterX.png" alt=""><a href="">Twitter/X</a></li>
+            <li><img src="/Gallery/Instagram.png" alt=""><a href="">Instagram</a></li>
+            <li><img src="/Gallery/Youtube.png" alt=""><a href="">Youtube</a></li>
+            <li><img src="/Gallery/Linkedin.png" alt=""><a href="">Linkedin</a></li>
+          </ul>
+
+          <h3 class="gettheapp">Get the App</h3>
+          <div class="getthe"><img src="/Gallery/GetTheAppstore.svg" alt=""></div>
+          <div class="getthe"><img src="/Gallery/GetTheGoggleStore.svg" alt=""></div>
+
+        </div>
+      </div>
+    </footer>
+
+    <!-- Section 12 -->
+    <div class="sec12">
+      <p>© 2025 United Bank for Africa. All Rights Reserved.</p>
+      <p>United Bank for Africa is licensed and regulated by the Central Bank of Nigeria.</p>
+    </div>
+
+  </div>
+  <script src="homepage.js"></script>
+</body>
+
+</html>
