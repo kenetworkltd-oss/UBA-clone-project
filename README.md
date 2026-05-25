@@ -4,7 +4,7 @@ A responsive front-end clone of the United Bank for Africa (UBA) web portal.
 I built this level 1 project to practice and showcase my skills in building clean user interfaces, 
 responsive CSS layouts, and interactive vanilla JavaScript elements.
 
-Live Demo: [View on Netlify](https://ubabankingclone-396600.netlify.app)
+Live Demo: https://mock-fintech-ui.netlify.app
 
  Tech Stack
 * **HTML5:** Multi-page routing and semantic structure.
